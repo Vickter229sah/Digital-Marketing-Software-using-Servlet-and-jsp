@@ -1,0 +1,36 @@
+.slider-button {
+    background: linear-gradient(to right, #cccccc, #FBF0BE, #234E70);
+    color: black;
+    
+    padding: 10px 20px;
+    border-radius: 15px 0 15px 0;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: #2E8B57,springgreen 0 1px;
+    
+   
+    display: inline-block;
+    width: 100px; /* Specify your desired width */
+    margin: 20px auto 0;
+    margin-left: 47%; /* Center horizontally */
+    transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .slider-button{
+        display: block;
+        margin: 20px auto 0;
+        margin-left: 0;
+        margin-left: 40%; 
+        
+    
+    }
+}
+
+.slider-button:hover {
+        background: linear-gradient(to right, #234E70, #FBF0BE, #cccccc); /* Reverse the gradient on hover */
+
+}
+

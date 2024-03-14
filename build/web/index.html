@@ -1,0 +1,86 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login Form</title>
+        <link rel="stylesheet" href="loginstyle.css" />
+    </head>
+    <body>
+        <div class="top">
+            <h1>Login..</h1>
+            <h3>Welcom to our HUB</h3>
+            <p>To keep connected with us please login with your personal info..</p>
+        </div>
+        <div class="login-container">
+            <div class="left">
+                <img src="about-banner.png" alt="Login Image" />
+            </div>
+            <div class="right">
+                <form action="Registration" method="post" >
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <div class="password-input">
+                            <input type="password" id="password" name="password" required />
+                            <button type="button" id="togglePassword">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    width="24"
+                                    height="24"
+                                    id="eyeIcon"
+                                    >
+                                <path
+                                    d="M12 4c-3.313 0-6 2.687-6 6s2.687 6 6 6s6-2.687 6-6s-2.687-6-6-6zm0 10.5c-2.485 0-4.5-2.015-4.5-4.5s2.015-4.5 4.5-4.5s4.5 2.015 4.5 4.5s-2.015 4.5-4.5 4.5zm0-3a1.5 1.5 0 1 1 0-3a1.5 1.5 0 0 1 0 3z"
+                                    />
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <circle cx="12" cy="12" r="3.2" />
+                                </svg>
+                            </button>
+
+                        </div>
+                    </div>
+
+
+                    <script>
+                        document
+                                .getElementById("togglePassword")
+                                .addEventListener("click", function () {
+                                    var passwordInput = document.getElementById("password");
+                                    var eyeIcon = document.getElementById("eyeIcon");
+
+                                    var type =
+                                            passwordInput.getAttribute("type") === "password"
+                                            ? "text"
+                                            : "password";
+                                    passwordInput.setAttribute("type", type);
+
+                                    eyeIcon.classList.toggle("clicked");
+                                });
+                    </script>
+
+                    <button type="submit" value="Register" class="login-btn">Login</button>
+                </form>
+                <div class="signin-google">
+                    <button class="google-btn">
+                        <img src="google.png" alt="Google Logo" />
+                        <a href="google_login">Login with Google</a>
+                    </button>
+                    <div class="create" style="margin: auto;">
+                        <p>
+                            <a href="#"> CREATE AN ACCOUNT ?</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+

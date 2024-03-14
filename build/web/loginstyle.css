@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: auto;
+    padding: 20px;
+    background-color: yellowgreen;
+}
+
+/* header login */
+
+.top {
+    text-align: center;
+    
+    
+}
+
+.top h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.top h3 {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.top p {
+    font-size: 18px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+
+
+
+.login-container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+/* create */
+.create {
+    margin: auto;
+    text-align: center; /* Center the content horizontally */
+}
+
+.create p {
+    margin: 0; /* Remove default margin for the <p> element */
+}
+
+.create a {
+    color: #007bff; /* Set the color of the link */
+    text-decoration: none; /* Remove underline from the link */
+    transition: color 0.3s ease; /* Add transition effect for color change */
+}
+
+.create a:hover {
+    color: #0056b3; /* Change color on hover */
+}
+
+
+
+
+
+
+
+.left {
+    width: 50%;
+    padding: 20px;
+}
+
+/* Define the keyframes for the shake animation */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Apply the shake animation to the image */
+.left img {
+    max-width: 100%;
+    animation: shake 2.5s ease infinite;
+}
+
+
+.right {
+
+    border-radius: 15% 0 15% 0;
+    width: 50%;
+    padding: 20px;
+    border: 3px solid transparent; /* Set initial border color to transparent */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: colorChange 5s infinite; /* Define the animation */
+}
+
+/* Define the keyframes for the animation */
+@keyframes colorChange {
+    0% { border-color: #ff0000; } /* Red */
+    6.66% { border-color: #ff4000; } /* Red-Orange */
+    13.33% { border-color: #ff8000; } /* Orange */
+    20% { border-color: #ffbf00; } /* Orange-Yellow */
+    26.66% { border-color: #ffff00; } /* Yellow */
+    33.33% { border-color: #bfff00; } /* Yellow-Green */
+    40% { border-color: #80ff00; } /* Green */
+    46.66% { border-color: #40ff00; } /* Green-Light Green */
+    53.33% { border-color: #00ff00; } /* Light Green */
+    60% { border-color: #00ff40; } /* Light Green-Cyan */
+    66.66% { border-color: #00ff80; } /* Cyan */
+    73.33% { border-color: #00ffbf; } /* Cyan-Sky Blue */
+    80% { border-color: #00ffff; } /* Sky Blue */
+    86.66% { border-color: #00bfff; } /* Sky Blue-Blue */
+    93.33% { border-color: #0080ff; } /* Blue */
+    100% { border-color: #0040ff; } /* Blue-Purple */
+}
+
+
+
+
+
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    
+    width: 95%;
+    padding: 8px;
+    
+    border-radius: 20px 0 20px 0;
+}
+
+.login-btn {
+    border-radius: 20px 0 20px 0;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+.signin-google {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.google-btn {
+    border-radius: 20px 0 20px 0;
+
+    height: 50px;
+    color: #000;
+    border: 1px solid #151313;
+    padding: 10px 20px;
+    
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.google-btn img {
+    height: 15px;
+    width: 15px;
+    margin-right: 10px; /* Add some space between the image and the text */
+}
+
+
+.google-btn:hover {
+    background-color: #f1f1f1;
+}
+
+/* Media query for screens up to 768px width */
+@media screen and (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left,
+    .right {
+        width: 90%;
+    }
+
+    .left img {
+        margin-bottom: 20px;
+    }
+
+    .form-group input,
+    .login-btn,
+    .google-btn {
+        width: calc(100% - 40px); /* Adjust width for smaller screens */
+    }
+    .password-input button {
+        
+        margin-right: 20px;
+    }
+    
+}
+
+
+/* visible */
+
+.password-input {
+    position: relative;
+}
+
+.password-input button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.password-input button svg {
+    width: 28px;
+    height: 28px;
+    fill: #0e1304;
+    transition: fill 0.3s ease;
+}
+
+.password-input button.clicked svg {
+    fill: #cf2f2f;
+}
+
+.password-input button:hover svg {
+    fill: #555;
+}
